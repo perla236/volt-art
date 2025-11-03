@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="hr" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoltArt - Stručne električne instalacije</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="static/mali.png" type="image/png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#dc2626",
+              secondary: "#000000",
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "float 6s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Navigacija -->
+
+    <nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="static/mali.png" alt="" class="logo-img">
+      
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Početna</a></li>
+      <li><a href="services.html">Usluge</a></li>
+      <li><a href="projects.html">Projekti</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+  </div>
+</nav>
+
+      <!-- Hero Section -->
+      <section class="hero relative py-32 md:py-40 lg:py-48">
+  <!-- Background image + overlay -->
+  <img src="static/pexels-weekendplayer-45072.jpg" alt="Električne instalacije" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/30"></div>
+
+  <div class="container mx-auto relative z-20 flex flex-col md:flex-row items-center gap-16 px-4 md:px-0 md:pl-48">
+
+    <!-- Logo lijevo -->
+    <div class="hero-logo flex-shrink-0 flex justify-center md:justify-start animate-slideInRight leading-relaxed"">
+      <img src="static/VA.png" alt="VoltArt Logo" >
+    </div>
+
+    <!-- Tekst desno -->
+    <div class="hero-text max-w-xl text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white animate-slideInLeft leading-snug">
+        <span class="text-primary">Električne</span> Instalacije
+      </h1>
+      <p class="text-lg md:text-xl lg:text-2xl text-gray-200 mt-6 animate-slideInRight leading-relaxed">
+        Profesionalne električne usluge za domove i tvrtke. Sigurnost, kvaliteta i inovativna rješenja u svakom projektu.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mt-8 justify-center md:justify-start animate-fadeIn">
+        <a href="#kontakt" class="bg-primary hover:bg-primary-600 text-white px-8 py-4 rounded-lg font-medium transition-all transform hover:scale-105 shadow-lg text-lg">
+          Kontaktirajte nas
+        </a>
+        <a href="#usluge" class="border-2 border-primary text-white px-8 py-4 rounded-lg font-medium transition-all hover:bg-primary hover:text-white text-lg">
+          Naše usluge
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+      <!-- Services Section -->
+      <section id="usluge" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16 animate-fadeIn">
+            <h2 class="text-4xl font-bold text-secondary dark:text-white mb-4">
+              Naše <span class="text-primary">Usluge</span>
+            </h2>
+            <p
+              class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+            >
+              Pružamo širok spektar električnih usluga za sve vaše potrebe
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group animate-slideFromLeft"
+              style="animation-delay: 0.1s"
+            >
+              <div
+                class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform mx-auto"
+              >
+                <i data-feather="home" class="text-white w-8 h-8"></i>
+              </div>
+              <h3
+                class="text-2xl font-bold mb-4 text-center text-secondary dark:text-white"
+              >
+                Kućne Instalacije
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 text-center">
+                Kompletne električne instalacije, rasvjeta, pametni domovi i
+                sigurnosni sustavi za vaš dom.
+              </p>
+            </div>
+
+            <div
+              class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group animate-slideFromRight"
+              style="animation-delay: 0.2s"
+            >
+              <div
+                class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform mx-auto"
+              >
+                <i data-feather="briefcase" class="text-white w-8 h-8"></i>
+              </div>
+              <h3
+                class="text-2xl font-bold mb-4 text-center text-secondary dark:text-white"
+              >
+                Poslovni Prostori
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 text-center">
+                Električne instalacije za uredske prostore, trgovine, restorane
+                i druge komercijalne objekte.
+              </p>
+            </div>
+
+            <div
+              class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group animate-slideFromLeft"
+              style="animation-delay: 0.3s"
+            >
+              <div
+                class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform mx-auto"
+              >
+                <i data-feather="zap" class="text-white w-8 h-8"></i>
+              </div>
+              <h3
+                class="text-2xl font-bold mb-4 text-center text-secondary dark:text-white"
+              >
+                Industrijske Instalacije
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 text-center">
+                Visokonaponske instalacije, električna oprema i energetska
+                rješenja za industrijske pogone.
+              </p>
+            </div>
+
+            <div
+              class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group animate-slideFromRight"
+              style="animation-delay: 0.4s"
+            >
+              <div
+                class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform mx-auto"
+              >
+                <i data-feather="tool" class="text-white w-8 h-8"></i>
+              </div>
+              <h3
+                class="text-2xl font-bold mb-4 text-center text-secondary dark:text-white"
+              >
+                Održavanje
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 text-center">
+                Redovno održavanje, popravci i nadogradnje postojećih
+                električnih instalacija.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16 animate-fadeIn">
+            <h2 class="text-4xl font-bold text-secondary dark:text-white mb-4">
+              Naši <span class="text-primary">Projekti</span>
+            </h2>
+            <p
+              class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+            >
+              Pogledajte neke od naših nedavno realiziranih projekata
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-slideInUp"
+              style="animation-delay: 0.1s"
+            >
+              <div class="relative overflow-hidden h-64">
+                <img
+                  src="http://static.photos/technology/640x360/10"
+                  alt="Projekt 1"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold text-white">
+                      Moderni uredski prostor
+                    </h3>
+                    <p class="text-gray-300">Zagreb</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-slideInUp"
+              style="animation-delay: 0.2s"
+            >
+              <div class="relative overflow-hidden h-64">
+                <img
+                  src="http://static.photos/indoor/640x360/15"
+                  alt="Projekt 2"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold text-white">Luksuzna vila</h3>
+                    <p class="text-gray-300">Split</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-slideInUp"
+              style="animation-delay: 0.3s"
+            >
+              <div class="relative overflow-hidden h-64">
+                <img
+                  src="http://static.photos/industry/640x360/30"
+                  alt="Projekt 3"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold text-white">
+                      Industrijski pogon
+                    </h3>
+                    <p class="text-gray-300">Rijeka</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-12 animate-fadeIn">
+            <a
+              href="projects.html"
+              class="inline-block border-2 border-primary text-primary dark:text-primary-300 px-8 py-3 rounded-lg font-medium transition-all hover:bg-primary hover:text-white text-lg"
+            >
+              Pogledajte sve projekte
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section
+        class="py-16 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-xl px-8 mb-12"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h2
+            class="text-3xl font-bold mb-8 text-center text-secondary dark:text-white"
+          >
+            <span class="border-b-4 border-primary pb-2">O Nama</span>
+          </h2>
+          <div class="flex flex-col md:flex-row gap-8 items-center">
+            <div class="md:w-1/3">
+              <img
+                src="static/pexels-pixabay-257736.jpg"
+                alt="Tim VoltArt"
+                class="rounded-full border-4 border-primary shadow-lg"
+              />
+            </div>
+            <div class="md:w-2/3">
+              <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">
+                VoltArt je obrt sa dugogodišnjim iskustvom u području
+                električnih instalacija. Naša strast prema struji i preciznosti
+                osigurava da svaki projekt izvedemo do savršenstva.
+              </p>
+              <p class="text-lg text-gray-700 dark:text-gray-300">
+                Vjerujemo da dobra električna instalacija nije samo
+                funkcionalna, već i umjetničko djelo - zato smo VoltArt.
+              </p>
+              <div class="mt-6 flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-primary rounded-full flex items-center justify-center"
+                >
+                  <i data-feather="award" class="text-white"></i>
+                </div>
+                <p class="text-gray-700 dark:text-gray-300">
+                  Certificirani električari sa 10+ godina iskustva
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="kontakt" class="py-16">
+        <h2
+          class="text-3xl font-bold text-center mb-12 text-secondary dark:text-white"
+        >
+          <span class="border-b-4 border-primary pb-2">Kontaktirajte Nas</span>
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-bold mb-6 text-secondary dark:text-white">
+              Pošaljite nam poruku
+            </h3>
+            <form class="space-y-4">
+              <div>
+                <label
+                  for="name"
+                  class="block mb-2 text-gray-700 dark:text-gray-300"
+                  >Ime i prezime</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:border-gray-600"
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-gray-700 dark:text-gray-300"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:border-gray-600"
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block mb-2 text-gray-700 dark:text-gray-300"
+                  >Poruka</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:border-gray-600"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="bg-primary hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-medium transition-all transform hover:scale-105"
+              >
+                Pošalji poruku
+              </button>
+            </form>
+          </div>
+
+          <div class="space-y-6">
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold mb-4 text-secondary dark:text-white">
+                Kontakt podaci
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-primary rounded-full flex items-center justify-center"
+                  >
+                    <i data-feather="phone" class="text-white"></i>
+                  </div>
+                  <a
+                    href="tel:+385991234567"
+                    class="text-gray-700 dark:text-gray-300 hover:text-primary"
+                    >BOBO : +385 99 123 4567</a
+                  >
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-primary rounded-full flex items-center justify-center"
+                  >
+                    <i data-feather="mail" class="text-white"></i>
+                  </div>
+                  <a
+                    href="mailto:info@voltart.hr"
+                    class="text-gray-700 dark:text-gray-300 hover:text-primary"
+                    >info@voltart.hr</a
+                  >
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-primary rounded-full flex items-center justify-center"
+                  >
+                    <i data-feather="map-pin" class="text-white"></i>
+                  </div>
+                  <p class="text-gray-700 dark:text-gray-300">
+                    Ulica električara 15, 31500 Našice
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold mb-4 text-secondary dark:text-white">
+                Radno vrijeme
+              </h3>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Ponedjeljak - Petak</span
+                  >
+                  <span class="font-medium">08:00 - 16:00</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-700 dark:text-gray-300">Subota</span>
+                  <span class="font-medium">09:00 - 13:00</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-700 dark:text-gray-300">Nedjelja</span>
+                  <span class="font-medium">Zatvoreno</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <!-- Feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Komponente -->
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+
+    <!-- Ostali skripti -->
+    <script src="script.js"></script>
+
+    <script>
+      feather.replace();
+    </script>
+
+
+  </body>
+</html>

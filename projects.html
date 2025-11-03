@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="hr" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoltArt - Naši Projekti</title>
+    <link rel="stylesheet" href="style.css" />
+     <link rel="icon" href="static/mali.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#dc2626",
+              secondary: "#000000",
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "float 6s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Navigacija -->
+
+    <nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="static/mali.png" alt="" class="logo-img">
+      
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" >Početna</a></li>
+      <li><a href="services.html">Usluge</a></li>
+      <li><a href="projects.html" class="active">Projekti</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+    </ul>
+
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+  </div>
+</nav>
+    <div class="absolute top-4 left-4 z-20">
+      
+    </div>
+    <main class="container mx-auto px-4 py-20">
+      <section class="text-center mb-16">
+        <h1
+          class="text-4xl md:text-5xl font-bold text-secondary dark:text-white mb-4"
+        >
+          Naši <span class="text-primary">Projekti</span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Pogledajte detalje o našim najnovijim realizacijama
+        </p>
+      </section>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div
+          class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden group animate-slideFromLeft"
+        >
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="http://static.photos/technology/640x360/10"
+              alt="Projekt 1"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-2 text-secondary dark:text-white">
+              Moderni uredski prostor
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Zagreb</p>
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+              Kompletna električna instalacija za novi uredski prostor od 500m²
+              sa pametnim sustavima upravljanja.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Rasvjeta</span
+              >
+              <span
+                class="bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Pametni dom</span
+              >
+              <span
+                class="bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Sigurnosni sustavi</span
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden group animate-slideFromRight"
+        >
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="http://static.photos/indoor/640x360/15"
+              alt="Projekt 2"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-2 text-secondary dark:text-white">
+              Luksuzna vila
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Split</p>
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+              Električne instalacije i pametni sustavi za luksuznu vilu na moru
+              sa bazenom i vinarijom.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Pametni dom</span
+              >
+              <span
+                class="bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Bazenska tehnologija</span
+              >
+              <span
+                class="bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Automatska rasvjeta</span
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden group animate-slideFromLeft"
+        >
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="http://static.photos/industry/640x360/30"
+              alt="Projekt 3"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-2 text-secondary dark:text-white">
+              Industrijski pogon
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Rijeka</p>
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+              Visokonaponske instalacije i energetska rješenja za novi
+              industrijski pogon površine 2000m².
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Visoki napon</span
+              >
+              <span
+                class="bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Industrijska oprema</span
+              >
+              <span
+                class="bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm"
+                >Energetska učinkovitost</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a
+          href="index.html#kontakt"
+          class="inline-block bg-primary hover:bg-primary-600 text-white px-8 py-3 rounded-lg font-medium transition-all transform hover:scale-105 shadow-lg text-lg"
+        >
+          Kontaktirajte nas za sličan projekt
+        </a>
+      </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
